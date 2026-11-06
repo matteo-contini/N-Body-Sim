@@ -9,8 +9,8 @@
 #include "allocator.h"
 
 
-/************************************************************GENERAZIONE MASSE UGUALI************************************************* */
-//La massa totale del sistema è normalizzata ad 1 ===>M_tot=1
+/************************************************************GENERATING EQUAL MASSES************************************************* */
+// The total mass of the system is M=1, so each star has mass 1/N
 void generating_equal_masses(double* masses, int N){
     
     // we generate equal mass stars. The system has a total mass M=1, 
@@ -20,7 +20,7 @@ void generating_equal_masses(double* masses, int N){
     }
     print_masses(masses, N);
 }
-/************************************************************GENERATORE POSIZIONI INIZIALI******************************************** */
+/************************************************************GENERATING INITIAL POSITIONS******************************************** */
 // stars are generated in an uniform density sphere with radius R=1
 
 void initial_positions_generator(Vector3D pos, const double* masses, int N){
@@ -62,7 +62,7 @@ void initial_positions_generator(Vector3D pos, const double* masses, int N){
         pos.z[i] -= z_cm;
     }
 }
-/***********************************************************GENERATORE VELOCITA' INIZIALI********************************************** */
+/***********************************************************GENERATING INITIAL VELOCITIES********************************************** */
 // the velocities components are uniformly distributed between -0.5 and 0.5 
 void initial_velocity_generator(Vector3D v, const double* masses, int N){
 

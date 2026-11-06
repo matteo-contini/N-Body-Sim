@@ -1,0 +1,4 @@
+.venv/
+*.gif
+bin/N_body
+bin/data
